@@ -1,0 +1,21 @@
+.header {
+    grid-area: header;
+    background-color: rgba(255, 255, 255, 1);
+    height: 72px;
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.user {
+    width: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span {
+    font-size: 14px;
+}

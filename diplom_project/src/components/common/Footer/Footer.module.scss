@@ -1,0 +1,36 @@
+.footer_wrap {
+    grid-area: footer;
+    height: 120px;
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.footer_logo {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+}
+
+.border {
+    height: 32px;
+    border: 1px solid rgba(66, 66, 66, 1);
+}
+
+.container {
+    width: 1170px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    
+
+}
+
+.container_icons {
+    width: 144px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

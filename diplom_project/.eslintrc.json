@@ -40,6 +40,7 @@
     "react/jsx-wrap-multilines": "off",
     "default-param-last": "off",
     "linebreak-style": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "no-use-before-define": "off"
 }
 }
