@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+.buttonForm {
+    width: 316px;
+    height: 48px;
+    background-color: rgba(72, 119, 242, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.buttonForm:disabled {
+    background-color: rgba(167, 208, 255, 1);
+}
+
+.buttonForm_active {
+    width: 316px;
+    height: 48px;
+    background-color: rgba(167, 208, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+@media screen and(max-width: 900px) {
+    .buttonForm {
+        width: 300px;
+    }
+    
+}
+
+@media screen and(max-width: 450px) {
+    .buttonForm {
+        width: 256px;   
+    }
+}

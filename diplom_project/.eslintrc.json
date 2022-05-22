@@ -41,6 +41,18 @@
     "default-param-last": "off",
     "linebreak-style": "off",
     "react/jsx-one-expression-per-line": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "import/order": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions1": "off",
+    "eslint no-irregular-whitespace": "off",
+    "indent": "off",
+    "no-trailing-spaces": "off",
+    "no-multiple-empty-lines": "off",
+    "semi": "off",
+    "no-undef":"off"
+    
+    
+
 }
 }

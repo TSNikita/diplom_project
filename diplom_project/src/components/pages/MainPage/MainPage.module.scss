@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import '../../../assets/style/vars.scss';
+
+
+.wrapper {
+    height: auto;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.container {
+    max-width: 1171px;
+    display: flex;
+    margin: auto;
+
+    &_title {
+        color: $title-color;
+        font-size: 48px;
+        font-weight: 700;
+        margin-top: 168px;
+        margin-bottom: 40px;
+        width: 464px;
+        line-height: 56px;
+    }
+
+    &_text {
+        color: $text-color;
+        font-size: $text-size;
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 168px;
+    }
+
+    &_image {
+        filter: contrast(90%);
+        
+    }
+}
+
+.block_images {
+position: relative;
+}
+
+.elips_left {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #a2bcfe;
+    filter: blur(51px);
+    width: 179px;
+    height: 176px;
+    left: 251px;
+    top: 210px;
+    opacity: 50%;
+}
+
+.elips_right {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(160, 255, 244, 0.85);
+    filter: blur(40px);
+    width: 173px;
+    height: 173px;
+    left: 438px;
+    top: 316px;
+    opacity: 64%;
+}
+
+
+.container_menu {
+    max-width: 1171px;
+    display: flex;
+    margin: auto;
+}
+
+.main_link_active {
+    background-color: rgba(255, 172, 40, 1);
+}

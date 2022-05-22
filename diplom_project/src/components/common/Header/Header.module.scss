@@ -1,21 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Tenor+Sans&display=swap');
+@import '../../../assets/style/vars.scss';
+
+.block_header {
+    height: 72px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+
+}
+
 .header {
     grid-area: header;
     background-color: rgba(255, 255, 255, 1);
-    height: 72px;
-    width: 1170px;
+    max-width: 1170px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: auto;
 }
 
+span:hover .menu_hover {
+    display: block;
+    transition: all 0.5ms;
+}
+
+span:hover .svg_menu path {
+    stroke: rgba(72, 119, 242, 1);
+}
+
+.span_hover:hover {
+    color: rgba(72, 119, 242, 1);
+}
+
+.block_user {
+    display: none;
+}
+
 .user {
+    position: relative;
     width: 67px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 500px;
+    font-family: 'Jost';
 }
 
-span {
+.user_header {
+    display: flex;
+    align-items: center;
+    height: 60px;
     font-size: 14px;
+    color: $text-color;
+    margin-right: 24px;
+}
+
+.menu_hover {
+    display: grid;
+    position: absolute;
+    width: 267px;
+    height: 323px;
+    background-color: white;
+    right: 0px;
+    top: 50px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(229, 229, 229, 1);
+    display: none;
+}
+
+.span_hover {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 14px;
+    color: $text-color;
+    margin-right: 24px;
+}
+
+.span_hover svg {
+    margin-right: 8px;
+}
+
+// svg path:hover {
+//     stroke: rgba(72, 119, 242, 1);
+// }
+
+
+
+.logo_style {
+    margin-right: 92px;
+    max-width: 102px;
+}
+
+.text_button {
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu_header {
+    display: flex;
+    align-items: center;
+    height: 84px;
+    border-bottom: 1px solid rgba(52, 43, 43, 0.1);
+}
+
+.menu_header h3 {
+    color: $title-color;
+    font-size: $text-size;
+    font-weight: 700;
+}
+
+.menu_hover ul li {
+    margin: 0;
+}
+
+.menu_hover ul li a {
+    height: 72px;
+    width: 267px;
+}
+.menu_header img {
+    margin-left: 24px;
+    margin-right: 16px;
+}
+
+.menu_top {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid rgba(52, 43, 43, 0.1);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.menu_hover ul li:hover { 
+    background-color: rgba(44, 45, 46, 0.04);
+}
+
+.menu_hover svg {
+    margin-left: 24px;
+    margin-right: 16px;
+}
+
+.menu_center {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid rgba(52, 43, 43, 0.1);
+    background-color: transparent;
+}
+
+.button_menu {
+    display: flex;
+    align-items: center;
+    height: 95px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.button_menu svg {
+    margin-left: 24px;
+    margin-right: 16px;
+}
+
+.svg_menu {
+    display: block;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(229, 229, 229, 1);
+    margin-left: 24px;
+    margin-right: 16px;
+    color: rgba(44, 45, 46, 1);
+    opacity: 50%;
+    font-style: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+// 768
+@media screen and (max-width: 900px) {
+    .header {
+        max-width: 900px;
+    }
+    .logo_style {
+        margin-right: 41px;
+        margin-left: 0;
+        max-width: 102px;
+    }
+    .text_span {
+        display: none;
+    }
+
+    .user_image {
+        display: none;
+    }
+
+    .avatar {
+        display: block;
+        margin-right: 24px;
+    }
+
+    .text_button {
+        display: none;
+    }
+
+    
+    .profile_span {
+        display: none;
+    }
+
+    .svg_menu_top {
+        display: none;
+    }
+
+    .block_user {
+        display: block;
+    }
+
+    .menu_hover {
+        min-width: 768px;
+        height: 100%;
+        z-index: 1;
+        top: 72px;
+    }
+
+    .user {
+        position: static;
+    }
+
+    .menu_hover ul li a {
+        min-width: 768px;
+    }
+
+
+}
+
+// 320
+@media screen and(max-width: 450px) {
+    .header {
+        max-width: 450px;
+        height: 56px;
+    }
+
+    .logo_style {
+        margin-left: 69px;
+        margin-right: 28px;
+    }
+
+    .avatar {
+        // margin-right: 16px;
+        // margin-left: 29px;
+    }
+
+    .user {
+        padding-left: 29px;
+        margin-right: 16px;
+    }
+
+    .text_button {
+        display: none;
+    }
+
+    .menu_hover {
+        min-width: 320px;
+        height: 706px;
+    }
 }

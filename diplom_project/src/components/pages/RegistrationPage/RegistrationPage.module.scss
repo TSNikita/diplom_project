@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+.check {
+    width: 204px;
+    display: flex;
+    height: 32px;
+}
+
+
+.check_text {
+    width: 168px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-left: 16px;
+    color: rgba(42, 47, 55, 1);
+}
+
+.check_text a {
+    color: rgba(72, 119, 242, 1);
+    text-decoration: underline;
+    
+}
+
+.check_checkbox {
+    display: none;
+}
+
+.check_fake {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(42, 47, 55, 0.08);
+    position: relative;
+}
+
+.check_fake::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-image: url("../../../images/Group\ 1714.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(42, 47, 55, 0.02);
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+
+
+.check_checkbox:checked + .check_fake::before {
+    opacity: 1;
+}
+
+.navigate {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(42, 47, 55, 0.12);
+    margin-bottom: 24px;
+    font-size: 12;
+    font-weight: 700;
+    color: rgba(42, 47, 55, 1);
+
+    &_reg {
+        padding-bottom: 4px;
+        margin-top: 14px;
+        width: 158px;
+    }
+
+    &_auth {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 4px;
+        margin-top: 14px;
+        width: 158px;
+    }
+}

@@ -1,5 +1,10 @@
+
 .searh_wrapper {
+    display: flex;
+    align-items: center;
     position: relative;
+    margin-right: 105px;
+    border: 1px solid rgba(72, 119, 242, 1);
 }
 
 .search_button {
@@ -8,12 +13,17 @@
     background-color: rgba(72, 119, 242, 1);
     border: none;
     color: rgba(242, 242, 242, 1);
-}
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    border-left: 1px solid rgba(72, 119, 242, 1);;
+}   
 
 .input {
-    width: 565px;
+    width: 469px;
     height: 36px;
-    border: 1px solid rgba(72, 119, 242, 1);
+    border: none;
+
 }
 
 .icons {
@@ -22,4 +32,43 @@
     padding-top: 6px;
     padding-bottom: 6px;
     
+}
+
+// 768
+@media screen and (max-width: 900px) {
+    .input {
+        max-width: 190px;
+    }
+
+    .searh_wrapper {
+        margin-right: 24px;
+        max-width: 286px;
+    }
+        
+}
+
+
+// 320
+@media screen and(max-width: 450px) {
+    .input {
+        display: none;
+    }
+
+    .search_button {
+        display: none;
+    }
+
+    .icons {
+        padding: 0;
+    }
+
+    .searh_wrapper {
+        display: flex;
+        align-items: baseline;
+        position: absolute;
+        z-index: 1;
+        right: 16px;
+        top: 25px;
+        border: none;
+    }
 }

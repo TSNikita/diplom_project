@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import '../../../assets/style/vars.scss';
+
+
+
+.main_wrapper {
+    display: flex;
+    margin-top: 40px;
+}
+
+.link_style {
+    width: 119px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    font-size: $text-size;
+    color: $title-color;
+    line-height: 24px;
+    font-weight: 400;
+    margin-right: 40px;
+}
+
+// .main_link:hover {
+//     border: 1px solid rgba(72, 119, 242, 1);
+//     color: rgba(72, 119, 242, 1);
+// }
+
+// .main_link:active {
+//     background-color: rgba(255, 172, 40, 1);
+    
+// }
+
+// .link_style {
+//     color: rgba(42, 47, 55, 1);
+// }
+
+
+.link_style:hover {
+    border: 1px solid rgba(72, 119, 242, 1);
+    color: rgba(72, 119, 242, 1);
+}
+
+.link_style:active {
+    background-color: rgba(255, 172, 40, 1);
+    color: rgba(42, 47, 55, 1);
+}

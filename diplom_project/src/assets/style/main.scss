@@ -2,9 +2,9 @@
 @import 'vars';
 
 body {
-  color: $text-color;
-  font-family: $text;
-  font-size: $text-size;
+  // color: $text-color;
+  font-family: "Jost";
+  // font-size: $text-size;
 }
 * {
   box-sizing: border-box;
@@ -23,17 +23,17 @@ h1,
 h2,
 h3,
 h4 {
-  color: $title-color;
-  font-family: $title;
-  font-size: $title-size;
+  // color: $title-color;
+  font-family: "Jost";
+  // font-size: $title-size;
 }
 a {
-  color: $title-color;
+  // color: $title-color;
   text-decoration: none;
 }
 .container {
-  max-width: 1280px;
-  padding: 60px;
+  // max-width: 1280px;
+  // padding: 60px;
 }
 // .active {
 //   color: green;

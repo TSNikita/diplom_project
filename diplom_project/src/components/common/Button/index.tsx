@@ -7,9 +7,11 @@ type ButtonPropsType = {
 };
 
 const Button = ({ title, onClick }: ButtonPropsType) => (
-  <button className={style.wrapper} onClick={onClick} type="button">
-    {title}
-  </button>
+  <div>
+    <button className={style.wrapper} onClick={onClick} type="button">
+      {title}
+    </button>
+  </div>
 );
 
 export default Button;
