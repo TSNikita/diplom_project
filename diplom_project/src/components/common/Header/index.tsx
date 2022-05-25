@@ -67,8 +67,8 @@ const Header = () => {
                     </h3>
                   </div>
                   <ul>
-                    <li>
-                      <NavLink to="/" className={style.menu_top}>
+                    <li className={style.menu_hover_li}>
+                      <NavLink to="declare" className={style.menu_top}>
                         <svg
                           width="20"
                           height="20"
@@ -94,7 +94,7 @@ const Header = () => {
                       </NavLink>
                     </li>
 
-                    <li>
+                    <li className={style.menu_hover_li}>
                       <NavLink to="/" className={style.menu_center}>
                         <svg
                           width="20"
@@ -134,7 +134,7 @@ const Header = () => {
                         <span>Админ Панель</span>
                       </NavLink>
                     </li>
-                    <li>
+                    <li className={style.menu_hover_li}>
                       <button type="button" className={style.button_menu}>
                         <svg
                           width="20"

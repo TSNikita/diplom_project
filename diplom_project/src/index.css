@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.ant-pagination-item-active {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.ant-checkbox-inner {
+  width: 24px !important;
+  height: 24px !important;
+  border-color: #d9d9d9 !important;
+  background-color: rgba(44, 45, 46, 0.04) !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: white !important;
+  border-color: #3A95FF !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border: 2px solid #3A95FF !important;
+  border-top: 0 !important;
+  border-left: 0 !important
+}
+
+.ant-checkbox-inner::after {
+  height: 12.142857px !important;
+  top: 42% !important;
+}
+
+
+
+

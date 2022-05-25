@@ -21,7 +21,7 @@ const Menu = ({ items, active, setActive }: MenuPropsType) => (
       </button>
       <ul>
         {items.map((item) => (
-          <li>
+          <li className={style.menu_li}>
             <NavLink to={item.href} className={style.link_menu}>
               {item.value}
             </NavLink>

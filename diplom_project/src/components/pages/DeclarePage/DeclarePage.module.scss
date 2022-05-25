@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import '../../../assets/style/vars.scss';
+@import '../../../assets/style/main.scss';
+
+.declare_wrapper {
+    padding-top: 40px;
+    max-width: 1171px;
+    display: flex;
+    margin: auto;
+}
+
+.block {
+    width: 263px;
+    height: 232px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-right: 40px;
+    flex-direction: column;
+
+    &_name {
+        display: flex;
+        align-items: center;
+        height: 88px;
+        border-bottom: 1px solid rgba(42, 47, 55, 0.1);
+    }
+
+    &_avatar {
+        width: 40px;
+        height: 32px;
+        background-color: rgba(42, 47, 55, 0.08);;
+        opacity: 40%;
+        margin: 0 16px 0 24px;
+    }
+
+    &_declare {
+        display: flex;
+        align-items: center;
+        height: 72px;
+        border-bottom: 1px solid rgba(42, 47, 55, 0.1);
+    }
+
+    &_exit {
+        display: flex;
+        align-items: center;
+        height: 72px;
+    }
+    
+}
+
+.line_left {
+    width: 2px;
+    height: 40px;
+    background-color: rgba(72, 119, 242, 1);
+}
+
+.block_name h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(42, 47, 55, 1);
+}
+
+.block_name span {
+    font-style: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgba(42, 47, 55, 1);
+    opacity: 60%;
+}
+
+
+.block span {
+    font-style: 12px;
+    font-weight: 400;
+    color: rgba(42, 47, 55, 1);
+}
+
+
+.block_declare span {
+    color: rgba(72, 119, 242, 1);
+}
+
+.block svg {
+    margin-left: 24px;
+    margin-right: 12px;
+}
+
+.block button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.block_right {
+    width: 867px;
+}
+
+.declare {
+
+&_filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    position: relative;
+    }
+
+&_info {
+        display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(42, 47, 55, 0.1);
+}
+
+&_count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 129px;
+    height: 40px;
+    border: none;
+    background-color: rgba(72, 119, 242, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    margin-bottom: 48px;
+    
+}
+
+&_count svg {
+    margin-left: 16px;
+}
+
+&_text h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: rgba(44, 45, 46, 1);
+}
+
+&_text span {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(44, 45, 46, 1);
+    opacity: 60%;
+}
+
+&_search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 420px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+&_search input {
+    width: 420px;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+
+}
+
+input::placeholder {
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 40%;
+}
+
+.button_filter {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button_filter svg path {
+    opacity: 40%;
+}
+
+.filter_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 153px;
+    height: 40px;
+    background-color: rgba(42, 47, 55, 0.08);
+}
+
+.filter_wrapper span {
+    margin-right: 16px;
+}
+
+
+.pagination {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+
+.vector_wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 96px;
+}
+
+.vector {
+    border: 2px solid rgba(44, 45, 46, 1);
+    border-radius: 50%;
+    opacity: 50%;
+    margin-bottom: 5px;
+}
+
+.declare_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.declare_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    height: 40px;
+    padding-left: 24px;
+    // padding-right: 92px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $title-color;
+    
+}
+
+.declare_header p {
+    opacity: 60%;
+}
+
+h4 {
+    margin-bottom: 0;
+
+}
+
+.style_p {
+    width: 155px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.filter_svg {
+    height: 24px;
+}
+
+.filter_button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.filter_publ {
+    padding-right: 120px;
+}
+
+.filter_data {
+    padding-left: 42px;
+}
+
+.check_menu {
+    display: flex;
+    position: absolute;
+    width: 337px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(44, 45, 46, 0.08);
+    top: 42px;
+    right: 229px;
+    z-index: 2;
+    display: none;
+}
+
+.filter_button:hover .check_menu {
+    display: flex;
+    transition: all 0.5ms;
+}
+
+.filter_button:hover .filter_span {
+    color: rgba(72, 119, 242, 1);
+}
+
+.filter_button:hover .filter_svg path {
+    stroke: rgba(72, 119, 242, 1);
+}
+
+.cat_check {
+    display: flex;
+    align-items: center;
+    width: 148px;
+    margin-bottom: 16px;
+}
+
+.check_cat {
+    margin-left: 24px;
+    margin-right: 20px;
+}
+
+.check_cat:last-child {
+    margin-right: 0;
+}
+
+.check_span {
+    font-size: 14px;
+    font-weight: 400;
+    color: $title-color;
+    padding-left: 16px;
+}
+
+.check_public_title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.check_cat h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.check_menu_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    position: absolute;
+    margin-bottom: 24px;
+    top: 388px;
+} 
+
+.check_menu_button button {
+    background-color: transparent;
+    border: 1px solid rgba(72, 119, 242, 1);
+    color: rgba(72, 119, 242, 1);
+    font-size: 14px;
+    font-weight: 500;
+    width: 103px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.check_menu_button button:hover {
+    background-color: rgba(72, 119, 242, 1);
+    color: rgba(255, 255, 255, 1);
+}

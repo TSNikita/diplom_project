@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import PageWrapper from './components/common/PageWrapper';
 import BoardPage from './components/pages/BoardPage';
 import AuthContainer from './containers/AuthContainer';
+import DeclarePageContainer from './containers/DeclarePageContainer';
 import MainPageContainer from './containers/MainPageContainer';
 import RegistrationContainer from './containers/RegistrationContainer';
 
@@ -14,6 +15,7 @@ const App = () => (
       </Route>
       <Route path="auth" element={<AuthContainer />} />
       <Route path="reg" element={<RegistrationContainer />} />
+      <Route path="declare" element={<DeclarePageContainer />} />
     </Route>
   </Routes>
 );
