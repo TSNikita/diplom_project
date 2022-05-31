@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import Burger from '../Burger';
-import Menu from '../Burger/Menu';
-import Footer from '../Footer';
-import Header from '../Header';
+import Burger from '../../Burger';
+import Menu from '../../Burger/Menu';
+import Footer from '../../Footer';
+import Header from '../../Header';
 import style from './PageWrapper.module.scss';
 
 const PageWrapper = () => {

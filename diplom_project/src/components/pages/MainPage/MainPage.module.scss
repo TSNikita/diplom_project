@@ -5,6 +5,7 @@
 .wrapper {
     height: auto;
     background-color: rgba(255, 255, 255, 1);
+    margin: auto;
 }
 
 .container {
@@ -73,4 +74,47 @@ position: relative;
 
 .main_link_active {
     background-color: rgba(255, 172, 40, 1);
+}
+
+.container_list {
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.wrapper_menu {
+    max-width: 1171px;
+    margin: auto;
+}
+
+.menu_h1 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.items_card {
+    max-width: 1171px;
+    margin: auto;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
+    // grid-gap: 40px;
+    margin-bottom: 40px;
+}
+
+.button_board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 242px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid rgba(72, 119, 242, 1);
+    border-radius: 4px;
+    color: rgba(72, 119, 242, 1);
+    margin: auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.button_board svg {
+    margin-right: 12px;
 }

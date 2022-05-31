@@ -50,7 +50,10 @@
     "no-trailing-spaces": "off",
     "no-multiple-empty-lines": "off",
     "semi": "off",
-    "no-undef":"off"
+    "no-undef":"off",
+    "import/prefer-default-export": 0,
+    "import/no-useless-path-segments": "off",
+    "global-require":"off"
     
     
 

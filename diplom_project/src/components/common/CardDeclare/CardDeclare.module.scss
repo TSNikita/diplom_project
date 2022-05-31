@@ -23,6 +23,7 @@
 
 
 .elips_wrapper {
+    position: relative;
     width: 24px;
     height: 24px;
     display: flex;
@@ -31,6 +32,13 @@
     justify-content: space-around;
     margin-right: 24px;
 }
+
+.elips_wrapper:hover {
+    background-color: rgba(66, 66, 66, 0.1);
+    
+    
+}
+
 
 .elips_block {
     width: 2px;
@@ -81,4 +89,101 @@
     justify-content: space-between;
     align-items: center;
     width: 699px;
+}
+
+
+.elips_hover_menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 242px;
+    height: 136px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(44, 45, 46, 0.08);
+    right: 0;
+    top: 23px;
+    z-index: 1;
+    display: none;
+}
+
+.hover_menu_link {
+    display: flex;
+    flex-direction: column;
+}
+
+.look_style {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    color: $title-color;
+    cursor: pointer;
+}
+
+.look_style span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $title-color;
+}
+
+.look_style svg{
+    margin-right: 16px;
+}
+
+.look_style:hover {
+    background-color: rgba(44, 45, 46, 0.04);
+    border: 1px solid rgba(44, 45, 46, 0.08);
+} 
+
+
+.edit_style {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.edit_style span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $title-color;
+}
+
+.edit_style svg {
+    margin-right: 16px;
+}
+
+.edit_style:hover {
+    background-color: rgba(44, 45, 46, 0.04);
+    border: 1px solid rgba(44, 45, 46, 0.08);
+}
+
+.button_style {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $title-color;
+}
+
+.button_style svg {
+    margin-right: 16px;
+}
+
+.button_style:hover {
+    background-color: rgba(44, 45, 46, 0.04);
+    border: 1px solid rgba(44, 45, 46, 0.08);
+}
+
+.elips_wrapper:hover .elips_hover_menu {
+    display: block;
 }

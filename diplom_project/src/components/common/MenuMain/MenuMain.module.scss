@@ -9,7 +9,7 @@
 }
 
 .link_style {
-    width: 119px;
+    width: 128px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
     color: $title-color;
     line-height: 24px;
     font-weight: 400;
-    margin-right: 40px;
+    margin-right: 18px;
 }
 
 // .main_link:hover {
@@ -45,4 +45,5 @@
 .link_style:active {
     background-color: rgba(255, 172, 40, 1);
     color: rgba(42, 47, 55, 1);
+    border: none;
 }

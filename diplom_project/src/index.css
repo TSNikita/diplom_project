@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -41,6 +43,91 @@ code {
   top: 42% !important;
 }
 
+.ant-select {
+  width: 398px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ant-select-arrow {
+  color: rgba(42, 47, 55, 1) !important;
+}
+
+.ant-select-selector {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 64px !important;
+  background-color: rgba(42, 47, 55, 0.02) !important;
+}
+
+.ant-select-selection-item {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.ant-input-number {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  height: 64px !important;
+  width: 397px !important;
+  background-color: rgba(42, 47, 55, 0.02) !important;
+}
+
+.ant-input-number-input {
+  height: 64px !important;
+}
 
 
+.ant-input {
+  margin-top: 8px !important;
+  height: 128px !important;
+  background-color: rgba(42, 47, 55, 0.02) !important;
+  border: 1px solid rgba(42, 47, 55, 0.08) !important;
+}
 
+.ant-input::placeholder {
+  padding-top: 21px !important;
+  padding-left: 24px !important;
+}
+
+.ant-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 145px !important;
+  height: 40px !important;
+  color: rgba(42, 47, 55, 1) !important;
+}
+
+.ant-upload-list-item-card-actions {
+  left: 50px !important;
+  bottom: 7px !important;
+}
+
+.ant-upload-list-item-error .ant-upload-list-item-card-actions .anticon {
+  color: rgba(42, 47, 55, 1) !important;
+}
+
+.ant-upload-list-item-error, .ant-upload-list-item-error .ant-upload-text-icon > .anticon, .ant-upload-list-item-error .ant-upload-list-item-name {
+  color: rgba(42, 47, 55, 1) !important;
+}
+
+.ant-upload-list-item-card-actions {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.ant-upload-list {
+  margin-left: 20px !important;
+}
+
+.ant-upload-list .ant-upload-list-tex {
+  width: 500px !important;
+  display: flex !important;
+  height: auto !important;
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import '../../../assets/style/vars.scss';
+@import '../../../assets/style/main.scss';
+
+
+.card_container {
+    max-width: 1171px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+// .card_container:hover {
+//     color: rgba(72, 119, 242, 1);
+// }
+
+.card_wrapper {
+    position: relative;
+}
+
+.card_top {
+    width: 363px;
+    height: 448px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.card_top:hover .card_name {
+    color: rgba(72, 119, 242, 1);
+}
+
+.card_img {
+    position: relative;
+}
+
+.card_span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 32px;
+    background-color: rgba(72, 119, 242, 1);
+    position: absolute;
+    z-index: 1;
+    left: 16px;
+    bottom: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card_name {
+    color: $title-color;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.card_text {
+    width: 258px;
+    height: 48px;
+    margin-left: 24px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $title-color;
+}
+
+.card_price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $title-color;
+    margin-left: 270px;
+    margin-bottom: 24px;
+}
+
+.block_bottom {
+    display: flex;
+    width: 315px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.card_data {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $title-color;
+    opacity: 40%;
+}
+
+.card_look {
+    width: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $title-color;
+    opacity: 40%;
+}
