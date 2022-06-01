@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import '../../../assets/style/vars.scss';
+
+
+.cardProduct_wrapper {
+    max-width: 1171px;
+    display: flex;
+    margin: auto;
+}
+
+.block_left {
+    width: 767px;
+}
+
+.prev_style {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.data_cardProduct {
+    width: 154px;
+    height: 40px;
+    background-color: rgba(42, 47, 55, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data_span {
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: rgba(42, 47, 55, 1);
+}
+
+.name_h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: rgba(42, 47, 55, 1);
+    margin-top: 24px;
+}
+
+.card_articl {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(42, 47, 55, 1);
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.card_look {
+    width: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $title-color;
+    opacity: 40%;
+    margin-bottom: 24px;
+}
+
+.image_container {
+    flex-wrap: wrap;
+}
+
+.img_top {
+    width: 766px;
+    height: 328px;
+    margin-bottom: 24px;
+}
+
+img {
+    cursor: pointer;
+}
+
+.img_item {
+    width: 162px;
+    height: 96px;
+    margin-right: 39px;
+    margin-bottom: 32px;
+}
+
+.img_item:last-child {
+    margin-right: 0;
+}
+
+.cardProduct_h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(42, 47, 55, 1);
+    margin-bottom: 24px;
+}
+
+.cardProduct_span {
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(42, 47, 55, 1);
+}
+
+.cardProduct_h2_g {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(42, 47, 55, 1);
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.cardProduct_h2_span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(42, 47, 55, 1);
+}
+
+.card_Product_maps {
+    margin-bottom: 40px;
+}

@@ -55,7 +55,6 @@
     "import/no-useless-path-segments": "off",
     "global-require":"off"
     
-    
 
 }
 }

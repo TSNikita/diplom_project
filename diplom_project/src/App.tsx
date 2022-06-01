@@ -5,6 +5,7 @@ import PageWrapper from './components/common/MenuMain/PageWrapper';
 import PageWrapperEdit from './components/common/PageWrapperEdit';
 import BoardPage from './components/pages/BoardPage';
 import AuthContainer from './containers/AuthContainer';
+import CardProductContainer from './containers/CardProductContainer';
 import DeclarePageContainer from './containers/DeclarePageContainer';
 import EditPageAdminContainer from './containers/EditPageAdminContainer';
 import EditPageUserContainer from './containers/EditPageUserContainer';
@@ -17,6 +18,7 @@ const App = () => (
       <Route path="/" element={<MainPageContainer />}>
         <Route path="/board" element={<BoardPage />} />
       </Route>
+      <Route path="stir" element={<CardProductContainer />} />
       <Route path="/" element={<PageWrapperEdit />}>
         <Route path="declare" element={<DeclarePageContainer />} />
         <Route path="edit" element={<EditPageUserContainer />} />

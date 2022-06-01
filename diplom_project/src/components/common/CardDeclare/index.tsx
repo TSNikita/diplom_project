@@ -5,7 +5,7 @@ import style from './CardDeclare.module.scss';
 type CardDeclarePropsType = {
   items: {
     name: string | undefined;
-    categori: string | undefined;
+    value: string | undefined;
     href: string;
     data: string | undefined;
     publ: string | undefined;
@@ -21,7 +21,7 @@ const CardDeclare = ({ items }: CardDeclarePropsType) => (
           <NavLink to={item.href} className={style.card_wrapper}>
             <div className={style.div}>
               <div className={style.card_name}>{item.name}</div>
-              <div className={style.card_categori}>{item.categori}</div>
+              <div className={style.card_categori}>{item.value}</div>
               <div className={style.card_data}>{item.data}</div>
               <div className={style.card_publ}>{item.publ}</div>
             </div>
