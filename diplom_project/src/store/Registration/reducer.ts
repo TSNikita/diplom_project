@@ -3,7 +3,8 @@ import { UserAction } from './actions';
 
 const initialState: UserReducerType = {
     name: '',
-    surname: ''
+    surname: '',
+    email: ''
 };
 
 const UserReducer = (state = initialState, action: ActionType) => {
@@ -17,6 +18,11 @@ const UserReducer = (state = initialState, action: ActionType) => {
             return {
                 ...state,
                 surname: action.payload
+            };
+            case UserAction.setEmail:
+            return {
+                ...state,
+                email: action.payload
             };
         default: 
         return state;

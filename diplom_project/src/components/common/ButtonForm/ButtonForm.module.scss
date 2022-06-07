@@ -11,10 +11,12 @@
     border-radius: 4px;
     margin-top: 24px;
     margin-bottom: 24px;
+    cursor: pointer;
 }
 
 .buttonForm:disabled {
     background-color: rgba(167, 208, 255, 1);
+    cursor: default;
 }
 
 .buttonForm_active {

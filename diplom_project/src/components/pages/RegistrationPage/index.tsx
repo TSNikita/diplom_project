@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable no-useless-escape */
+/* eslint-disable operator-linebreak */
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import ButtonForm from '../../common/ButtonForm';
@@ -5,7 +8,12 @@ import Form from '../../common/Form';
 import Input from '../../common/Form/Input';
 import PasswordInput from '../../common/Form/Input/PasswordInput';
 import style from './RegistrationPage.module.scss';
-import { setSurNameAction, setUserNameAction } from '../../../store/Registration/actions';
+import {
+  setSurNameAction,
+  setUserNameAction,
+  setEmailAction,
+} from '../../../store/Registration/actions';
+// import { RegistrationUser } from '../../../actions/userRegistr';
 
 const RegistrationPage = () => {
   const dispatch = useDispatch();
@@ -21,6 +29,7 @@ const RegistrationPage = () => {
   const submitHandler = () => {
     dispatch(setUserNameAction(name.value));
     dispatch(setSurNameAction(surname.value));
+    dispatch(setEmailAction(email.value));
   };
 
   useEffect(() => {
@@ -35,7 +44,7 @@ const RegistrationPage = () => {
   }, []);
 
   const nameValidation = () => {
-    if (name.value === '') {
+    if (name.value === '' || name.value.length > 25) {
       setName((prev) => ({ ...prev, error: true }));
       // setError(false);
       setDisabled(false);
@@ -48,7 +57,7 @@ const RegistrationPage = () => {
   };
 
   const surnameValidation = () => {
-    if (surname.value === '') {
+    if (surname.value === '' || surname.value.length > 25) {
       setSurName((prev) => ({ ...prev, error: true }));
       // setError(false);
       setDisabled(false);
@@ -61,26 +70,29 @@ const RegistrationPage = () => {
   };
 
   const emailValidation = () => {
-    if (email.value === '') {
-      setEmail((prev) => ({ ...prev, error: true }));
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (email.value === '' || re.test(email.value)) {
+      setEmail((prev) => ({ ...prev, error: false }));
       // setError(true);
       setDisabled(false);
       return false;
     }
-    setEmail((prev) => ({ ...prev, error: false }));
+    setEmail((prev) => ({ ...prev, error: true }));
     // setError(false);
     // setDisabled(true);
     return true;
   };
 
   const validation = () => {
-    if (!repeatpassword.value.length || !password.value.length) {
+    if (!repeatpassword.value.length || (!password.value.length && password.value.length <= 7)) {
       setPassword((prev) => ({ ...prev, error: true }));
       setRepeatPassword((prev) => ({ ...prev, error: true }));
       // setDisabled(false);
       return false;
     }
-    if (repeatpassword.value !== password.value) {
+    if (repeatpassword.value !== password.value && repeatpassword.value.length <= 7) {
       setPassword((prev) => ({ ...prev, error: true }));
       setRepeatPassword((prev) => ({ ...prev, error: true }));
       // setDisabled(false);
@@ -119,7 +131,6 @@ const RegistrationPage = () => {
         type="text"
         validation={emailValidation}
       />
-
       <PasswordInput
         id="password"
         placeholder="Пароль"
@@ -127,7 +138,6 @@ const RegistrationPage = () => {
         setValue={setPassword}
         validation={validation}
       />
-
       <PasswordInput
         id="repeatpassword"
         placeholder="Повторите пароль"
@@ -135,7 +145,6 @@ const RegistrationPage = () => {
         setValue={setRepeatPassword}
         validation={validation}
       />
-
       <label className={style.check} htmlFor="id">
         <input
           className={style.check_checkbox}
@@ -151,7 +160,7 @@ const RegistrationPage = () => {
           Принимаю условия <a href="!#">Пользовательского соглашения</a>
         </span>
       </label>
-      <ButtonForm onClick={submitHandler} disabled={!disabled} title="Создать аккаунт" />
+      <ButtonForm disabled={!disabled} onClick={submitHandler} title="Создать аккаунт" />
     </Form>
   );
 };

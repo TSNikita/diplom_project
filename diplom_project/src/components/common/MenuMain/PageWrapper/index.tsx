@@ -25,11 +25,7 @@ const PageWrapper = () => {
       <div className={style.content_wrapper}>
         <main className={style.content}>
           <Outlet />
-          <Burger
-            onClick={() => setMenuActive(!menuActive)}
-            // openBurger={open}
-            // setOpenBurger={setOpen}
-          />
+          <Burger onClick={() => setMenuActive(!menuActive)} />
           <Menu active={menuActive} setActive={setMenuActive} items={items} />
         </main>
       </div>

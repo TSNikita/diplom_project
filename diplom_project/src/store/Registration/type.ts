@@ -1,12 +1,14 @@
 export type UserReducerType = {
     name: string
     surname: string
+    email: string
 }
 
 
 export type UserActionType = {
     setUserName: 'SET_NAME'
     setSurName: 'SET_SURNAME'
+    setEmail: 'SET_EMAIL'
 }
 
 
@@ -20,4 +22,9 @@ export type setSurNameActionType = {
     payload: string
 }
 
-export type ActionType = setUserNameActionType | setSurNameActionType;
+export type setEmailActionType = { 
+    type:UserActionType['setEmail']
+    payload: string
+}
+
+export type ActionType = setUserNameActionType | setSurNameActionType | setEmailActionType;

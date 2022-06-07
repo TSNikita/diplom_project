@@ -16,6 +16,13 @@ const BoardPage = () => {
     { value: 'Товары для дома', href: '/Productshome' },
   ];
 
+  // const checkActive = (match: any, location: any) => {
+  //   if (!location) return false;
+  //   const { href } = location;
+  //   const { url } = match;
+  //   return href === url;
+  // };
+
   return (
     <div>
       <div className={style.container_list}>

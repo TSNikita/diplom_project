@@ -13,10 +13,12 @@ import GetUserName from '../../../store/Registration/selectors';
 import Elips from '../../../images/Ellipse 4.png';
 import close from '../../../images/x.png';
 import GetSurName from '../../../store/Registration/selectorsSurname';
+import GetEmail from '../../../store/Registration/selectorEmail';
 
 const Header = () => {
   const name = useSelector(GetUserName);
   const surname = useSelector(GetSurName);
+  const email = useSelector(GetEmail);
 
   const getInitialState = (str: string, strS: string) => {
     const updateName = str.split(' ');
@@ -32,7 +34,7 @@ const Header = () => {
         <Button title="Подать обьявление" onClick={console.log} />
         <div className={style.user}>
           <Link to="/reg">
-            {name ? (
+            {email ? (
               <span className={style.span_hover}>
                 <svg
                   className={style.svg_menu}

@@ -2,7 +2,8 @@ import { UserActionType } from './type';
 
 export const UserAction: UserActionType = {
     setUserName: 'SET_NAME',
-    setSurName: 'SET_SURNAME'
+    setSurName: 'SET_SURNAME',
+    setEmail: 'SET_EMAIL'
 }
 
 export const setUserNameAction = (name: string) => ({
@@ -15,4 +16,9 @@ export const setSurNameAction = (surname: string) => ({
     payload: surname
 })
 
+
+export const setEmailAction = (email: string) => ({
+    type: UserAction.setEmail,
+    payload: email
+})
 
