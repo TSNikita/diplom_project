@@ -3,10 +3,15 @@ import { NavLink } from 'react-router-dom';
 import style from './CardProductPage.module.scss';
 import ImagesTop from '../../../helpers/ImageTop';
 import maps from '../../../images/image 2 (1).png';
-import CardProductSee from '../../common/CardProductRight';
+import { data } from '../../../helpers';
 
-const CardProductPage = () => {
+type CardProductPagePropsType = {
+  product: { name: string; text: string; id: string; data: string; price: string };
+};
+
+const CardProductPage = ({ product }: CardProductPagePropsType) => {
   const [imageTop, setImageTop] = useState(ImagesTop[0]);
+  const [visible, setVisible] = useState(false);
 
   return (
     <div className={style.cardProduct_wrapper}>
@@ -27,9 +32,9 @@ const CardProductPage = () => {
           </NavLink>
         </div>
         <div className={style.data_cardProduct}>
-          <span className={style.data_span}>14 апреля 2022</span>
+          <span className={style.data_span}>{product?.data}</span>
         </div>
-        <h1 className={style.name_h1}>Стиральная машина Bosch</h1>
+        <h1 className={style.name_h1}>{product?.name}</h1>
         <span className={style.card_articl}>WS-25645-253-55</span>
         <div className={style.card_look}>
           <svg
@@ -68,10 +73,7 @@ const CardProductPage = () => {
         </div>
         <div>
           <h2 className={style.cardProduct_h2}>Описание: </h2>
-          <span className={style.cardProduct_span}>
-            Стиральная машина в отличном состянии, чистая, без накипи. <br /> С машиной отдам новый
-            шланг для подключения воды и упаковку средства против накипи.
-          </span>
+          <span className={style.cardProduct_span}>{product?.text}</span>
         </div>
         <div>
           <h2 className={style.cardProduct_h2_g}>
@@ -80,7 +82,38 @@ const CardProductPage = () => {
           <img src={maps} alt="maps" className={style.card_Product_maps} />
         </div>
       </div>
-      <CardProductSee />
+      <div className={style.block_right_wrapper}>
+        <div className={style.block_right}>
+          <span className={style.right_price}>{product?.price}</span>
+          <div className={style.block_telephone}>
+            <button
+              type="button"
+              className={style.right_button}
+              onClick={() => setVisible(!visible)}>
+              Показать номер
+            </button>
+            {visible && (
+              <span className={style.phone}>
+                <a href="tel:+79304566569">+7 (930) 456 - 65 - 69</a>
+              </span>
+            )}
+          </div>
+
+          <span className={style.right_span}>Смотрите также:</span>
+          <div className={style.see_product}>
+            <img src="" alt="" className={style.right_img} />
+            <span className={style.cardProduct_span_right}>
+              Стиральная машина <br /> <span className={style.span_h}>Samsung</span>
+            </span>
+          </div>
+          <div>
+            <img src="" alt="" className={style.right_img} />
+            <span className={style.cardProduct_span_right}>
+              Стиральная машина <br /> <span className={style.span_h}>Indesit</span>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

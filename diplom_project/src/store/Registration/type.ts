@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export type UserReducerType = {
     name: string
     surname: string
@@ -9,6 +10,7 @@ export type UserActionType = {
     setUserName: 'SET_NAME'
     setSurName: 'SET_SURNAME'
     setEmail: 'SET_EMAIL'
+    clearUser: 'CLEAR_USER'
 }
 
 
@@ -27,4 +29,8 @@ export type setEmailActionType = {
     payload: string
 }
 
-export type ActionType = setUserNameActionType | setSurNameActionType | setEmailActionType;
+export type clearUserActionType = {
+    type: UserActionType['clearUser']
+}
+
+export type ActionType = setUserNameActionType | setSurNameActionType | setEmailActionType | clearUserActionType;

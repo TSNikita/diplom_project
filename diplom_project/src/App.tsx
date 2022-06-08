@@ -18,10 +18,11 @@ const App = () => (
   <Routes>
     <Route path="/" element={<PageWrapper />}>
       <Route path="/" element={<MainPageContainer />}>
-        <Route path="/board" element={<BoardPage />} />
+        {/* <Route path="/" element={<BoardPage />} /> */}
       </Route>
-      <Route path="/stir" element={<CardProductContainer />} />
-      <Route path="error" element={<ErrorContainer />} />
+
+      <Route path=":id" element={<CardProductContainer />} />
+      <Route path="*" element={<ErrorContainer />} />
       <Route
         path="/"
         element={

@@ -4,7 +4,7 @@ import style from './Card.module.scss';
 
 type CardPropsType = {
   card: {
-    id?: number | undefined;
+    id: string;
     image?: any;
     value: string;
     name: string;
@@ -12,7 +12,6 @@ type CardPropsType = {
     price: string;
     data: string;
     look: string;
-    href: string;
   }[];
 };
 
@@ -20,7 +19,7 @@ const Card = ({ card }: CardPropsType) => (
   <div className={style.card_container}>
     {card.map((item) => (
       <nav>
-        <NavLink to={item.href}>
+        <NavLink to={item.id}>
           <div className={style.card_top}>
             <div className={style.card_wrapper}>
               <img src={item.image} alt="" className={style.card_img} />

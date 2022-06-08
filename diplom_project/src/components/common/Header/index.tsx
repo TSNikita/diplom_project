@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import style from './Header.module.scss';
 import Logo from '../../../images/Logo.png';
 import SearchInput from '../SearchInput';
-import User from '../../../images/user.png';
 import Button from '../Button';
+import { useSelector, useDispatch } from 'react-redux';
 import '../../../assets/style/main.scss';
 import '@fontsource/jost';
-import Avatar from '../../../images/Group 1842.png';
 import { Link, NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import GetUserName from '../../../store/Registration/selectors';
-import Elips from '../../../images/Ellipse 4.png';
-import close from '../../../images/x.png';
 import GetSurName from '../../../store/Registration/selectorsSurname';
 import GetEmail from '../../../store/Registration/selectorEmail';
+import { clearUserAction } from '../../../store/Registration/actions';
 
 const Header = () => {
+  const dispatch = useDispatch();
   const name = useSelector(GetUserName);
   const surname = useSelector(GetSurName);
   const email = useSelector(GetEmail);
@@ -137,7 +135,10 @@ const Header = () => {
                       </NavLink>
                     </li>
                     <li className={style.menu_hover_li}>
-                      <button type="button" className={style.button_menu}>
+                      <button
+                        type="button"
+                        className={style.button_menu}
+                        onClick={() => dispatch(clearUserAction())}>
                         <svg
                           width="20"
                           height="20"
