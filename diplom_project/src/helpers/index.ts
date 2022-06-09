@@ -13,6 +13,7 @@ export const data = [
     price: '15 000 Р',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
 
   },
   {
@@ -25,6 +26,7 @@ export const data = [
     price: '500 Р ',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
   {
     id: '3',
@@ -36,6 +38,7 @@ export const data = [
     price: '2 000 Р',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
   {
     id: '4',
@@ -47,6 +50,7 @@ export const data = [
     price: '28 000 Р',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
   {
     id: '5',
@@ -58,6 +62,7 @@ export const data = [
     price: '4 500 Р',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
   {
     id: '6',
@@ -69,6 +74,7 @@ export const data = [
     price: '8 500 Р',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
   {
     id: '7',
@@ -80,6 +86,7 @@ export const data = [
     price: '7 500 Р ',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
   {
     id: '8',
@@ -91,6 +98,7 @@ export const data = [
     price: '8 000 Р ',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
   {
     id: '9',
@@ -102,5 +110,6 @@ export const data = [
     price: '43 000 Р ',
     data: '14 апреля 2021',
     look: '356',
+    publ: 'да',
   },
 ];

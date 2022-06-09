@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './CardProductPage.module.scss';
-import ImagesTop from '../../../helpers/ImageTop';
 import maps from '../../../images/image 2 (1).png';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 type CardProductPagePropsType = {
   product: {
@@ -16,7 +18,6 @@ type CardProductPagePropsType = {
 };
 
 const CardProductPage = ({ product }: CardProductPagePropsType) => {
-  const [imageTop, setImageTop] = useState(ImagesTop[0]);
   const [visible, setVisible] = useState(false);
 
   return (
@@ -69,13 +70,21 @@ const CardProductPage = ({ product }: CardProductPagePropsType) => {
           356
         </div>
         <div className="image_container">
-          <img src={product.image} alt="" className={style.img_top} />
-          <div className={style.imgContainer}>
-            {ImagesTop.map((img) => (
-              // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-              <img src={img} alt="" className={style.img_item} onClick={() => setImageTop(img)} />
-            ))}
-          </div>
+          <div className={style.imgContainer} />
+          <Carousel>
+            <div>
+              <img src={product?.image} />
+            </div>
+            <div>
+              <img src={product?.image} />
+            </div>
+            <div>
+              <img src={product?.image} />
+            </div>
+            <div>
+              <img src={product?.image} />
+            </div>
+          </Carousel>
         </div>
         <div>
           <h2 className={style.cardProduct_h2}>Описание: </h2>
