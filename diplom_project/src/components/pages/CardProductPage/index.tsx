@@ -3,10 +3,16 @@ import { NavLink } from 'react-router-dom';
 import style from './CardProductPage.module.scss';
 import ImagesTop from '../../../helpers/ImageTop';
 import maps from '../../../images/image 2 (1).png';
-import { data } from '../../../helpers';
 
 type CardProductPagePropsType = {
-  product: { name: string; text: string; id: string; data: string; price: string };
+  product: {
+    name: string;
+    text: string;
+    id: string;
+    data: string;
+    price: string;
+    image: any;
+  };
 };
 
 const CardProductPage = ({ product }: CardProductPagePropsType) => {
@@ -63,7 +69,7 @@ const CardProductPage = ({ product }: CardProductPagePropsType) => {
           356
         </div>
         <div className="image_container">
-          <img src={imageTop} alt="" className={style.img_top} />
+          <img src={product.image} alt="" className={style.img_top} />
           <div className={style.imgContainer}>
             {ImagesTop.map((img) => (
               // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions

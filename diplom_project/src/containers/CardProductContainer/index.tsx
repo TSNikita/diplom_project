@@ -4,8 +4,8 @@ import CardProductPage from '../../components/pages/CardProductPage';
 import { data } from '../../helpers/index';
 
 const CardProductContainer = () => {
-  const { params } = useParams();
-  const user = data.find((el) => el.id === params)!;
+  const { id } = useParams();
+  const user = data.find((el) => el.id === id)!;
   return (
     <div>
       <CardProductPage product={user} />

@@ -1,7 +1,7 @@
 export default [
-    'https://unsplash.com/photos/QPCH59pKJXk',
-    'https://unsplash.com/photos/QPCH59pKJXk',
-    'https://unsplash.com/photos/QPCH59pKJXk',
-    'https://unsplash.com/photos/QPCH59pKJXk'
+    '../helpers/imgCard/Rectangle 212.png',
+    '../helpers/imgCard/Rectangle 212.png',
+    '../helpers/imgCard/Rectangle 212.png',
+    '../helpers/imgCard/Rectangle 212.png'
     
 ];

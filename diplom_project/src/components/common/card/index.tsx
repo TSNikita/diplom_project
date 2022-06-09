@@ -12,6 +12,7 @@ type CardPropsType = {
     price: string;
     data: string;
     look: string;
+    key?: string;
   }[];
 };
 
