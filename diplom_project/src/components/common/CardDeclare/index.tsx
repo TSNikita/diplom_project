@@ -6,11 +6,7 @@ type CardDeclarePropsType = {
   items: {
     name: string;
     value: string;
-    image?: any;
-    text?: string | undefined;
-    next?: string | undefined;
-    look?: string;
-    data: string;
+    Date: string;
     publ: string;
     id: string;
   }[];
@@ -21,11 +17,11 @@ const CardDeclare = ({ items }: CardDeclarePropsType) => (
     <ul className={style.card_ul}>
       {items.map((item) => (
         <li className={style.card_li}>
-          <NavLink to={item.id} className={style.card_wrapper}>
+          <NavLink to={item.id} className={style.card_wrapper} key={item.id}>
             <div className={style.div}>
               <div className={style.card_name}>{item?.name}</div>
               <div className={style.card_categori}>{item?.value}</div>
-              <div className={style.card_data}>{item?.data}</div>
+              <div className={style.card_data}>{item?.Date}</div>
               <div className={style.card_publ}>{item?.publ}</div>
             </div>
             <div className={style.elips_wrapper}>
@@ -35,7 +31,7 @@ const CardDeclare = ({ items }: CardDeclarePropsType) => (
               <div className={style.elips_hover_menu}>
                 <ul>
                   <li className={style.hover_menu_link}>
-                    <NavLink to="look" className={style.look_style}>
+                    <NavLink to={item.id} className={style.look_style}>
                       <svg
                         width="20"
                         height="20"

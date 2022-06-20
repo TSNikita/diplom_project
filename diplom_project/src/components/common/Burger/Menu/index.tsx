@@ -22,7 +22,7 @@ const Menu = ({ items, active, setActive }: MenuPropsType) => (
       <ul>
         {items.map((item) => (
           <li className={style.menu_li}>
-            <NavLink to={item.href} className={style.link_menu}>
+            <NavLink to={item.href} className={style.link_menu} key={item.href}>
               {item.value}
             </NavLink>
           </li>

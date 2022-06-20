@@ -118,3 +118,74 @@ position: relative;
 .button_board svg {
     margin-right: 12px;
 }
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 671px;
+        height: 224px;
+        margin-bottom: 40px;
+        margin-left: 25px;
+
+    &_title {
+        margin-top: 72px;
+        font-size: 36px;
+        margin-bottom: 32px;
+        width: 340px;
+        
+
+    }
+
+}
+
+.container_image {
+    width: 480px;
+    position: absolute;
+    top: -12px;
+    left: -101px;
+}
+
+.elips_left {
+display: none;
+}
+.elips_right {
+    display: none;
+    }
+
+
+}
+
+
+@media screen and(max-width: 450px) {
+
+    .container {
+        // max-width: 320px;
+        margin: auto;
+        height: auto;
+        flex-direction: column-reverse;
+
+    &_text {
+        display: none;
+    }
+
+    &_title {
+        margin-top: 247px;
+        font-size: 24px;
+        margin-bottom: 32px;
+        width: 228px;
+        margin-left: 48px;
+
+    }
+
+}
+
+.wrapper {
+    width: 450px;
+}
+
+.container_image {
+    width: 438px;
+    left: -58px;
+    top: -31px;
+}
+}

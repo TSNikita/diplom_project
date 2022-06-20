@@ -32,6 +32,10 @@
         background-color: rgba(42, 47, 55, 0.08);;
         opacity: 40%;
         margin: 0 16px 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
     }
 
     &_declare {

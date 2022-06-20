@@ -3,60 +3,20 @@ import 'antd/dist/antd.css';
 import style from './DeclarePage.module.scss';
 import { Pagination, Checkbox } from 'antd';
 import CardDeclare from '../../common/CardDeclare';
+import { itemsCard } from '../../../helpers';
 
 const DeclarePage = () => {
-  const itemsCard = [
-    { name: 'Чепчик', id: '10', value: 'Одежда', data: '12 апреля 2022', publ: 'да' },
-    {
-      name: 'Самовар',
-      id: '11',
-      value: 'Товары для дома',
-      data: '12 апреля 2022',
-      publ: 'да',
-    },
-    {
-      name: 'Стиральная машина LG',
-      id: '12',
-      value: 'Техника',
-      data: '11 апреля 2022',
-      publ: 'да',
-    },
-    {
-      name: 'Часы Rolex',
-      id: '13',
-      value: 'Аксессуары',
-      data: '10 апреля 2022',
-      publ: 'да',
-    },
-    {
-      name: 'Lada Kalina',
-      id: '14',
-      value: 'Автомобили',
-      data: '9 апреля 2022',
-      publ: 'да',
-    },
-    {
-      name: 'Спортивный велосипед',
-      id: '15',
-      value: 'Спорт',
-      data: '9 апреля 2022',
-      publ: 'да',
-    },
-    {
-      name: 'Ботинки поношенные',
-      id: '16',
-      value: 'Одежда',
-      data: '9 апреля 2022',
-      publ: 'да',
-    },
-    {
-      name: 'Приставка Dendy',
-      id: '17',
-      value: 'Техника',
-      data: '8 апреля 2022',
-      publ: 'да',
-    },
-  ];
+  const sortData = itemsCard
+    .sort((a, b) => new Date(a.Date).getTime() - new Date(b.Date).getTime())
+    .reverse();
+
+  // const sortData = (field: string) => {
+  //   console.log(field);
+  //   const copyData = itemsCard;
+  //   console.log(copyData);
+  //   copyData.sort((a, b) => (a.id > b.id ? 1 : -1));
+  // };
+
   return (
     <div className={style.declare_wrapper}>
       <div className={style.block_right}>
@@ -213,7 +173,7 @@ const DeclarePage = () => {
           <div className={style.declare_header}>
             <p className={style.style_p}>
               Название объявления
-              <div className={style.filter_svg}>
+              <button type="button" className={style.sort_svg} onClick={() => sortData[3]}>
                 <svg
                   width="24"
                   height="24"
@@ -225,7 +185,7 @@ const DeclarePage = () => {
                     <path d="M12 17L8 13L16 13L12 17Z" fill="#2C2D2E" />
                   </g>
                 </svg>
-              </div>
+              </button>
             </p>
             <p>Категория</p>
             <p className={style.filter_data}>Дата публикации</p>

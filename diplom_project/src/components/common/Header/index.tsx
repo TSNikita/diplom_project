@@ -7,10 +7,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import '../../../assets/style/main.scss';
 import '@fontsource/jost';
 import { Link, NavLink } from 'react-router-dom';
-import GetUserName from '../../../store/Registration/selectors';
+
 import GetSurName from '../../../store/Registration/selectorsSurname';
 import GetEmail from '../../../store/Registration/selectorEmail';
-import { clearUserAction } from '../../../store/Registration/actions';
+import { clearUserAction, setEmailAction } from '../../../store/Registration/actions';
+import GetUserName from './../../../store/Registration/selectors';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ const Header = () => {
         <Button title="Подать обьявление" onClick={console.log} />
         <div className={style.user}>
           <Link to="/reg">
-            {email ? (
+            {name ? (
               <span className={style.span_hover}>
                 <svg
                   className={style.svg_menu}

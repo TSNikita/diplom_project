@@ -10,6 +10,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 40px;
+    margin-bottom: 40px;
 }
 
 // .card_container:hover {
@@ -107,3 +108,57 @@
     color: $title-color;
     opacity: 40%;
 }
+
+
+@media screen and (max-width: 900px) {
+    .card_container {
+        max-width: 900px;
+        grid-gap: 24px;
+        margin-left: 25px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card_top {
+        width: 347px;
+    }
+
+    .card_img {
+        width: 347px;
+        position: relative;
+    }
+
+    .card_price {
+        width: 79px;
+    }
+
+    .block_bottom {
+        width: 300px;
+    }
+}
+
+@media screen and(max-width: 450px) {
+    .card_container {
+        max-width: 320px;
+        margin-left: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .card_top {
+        width: 284px;
+    }
+
+    .card_img {
+        width: 284px;
+        position: relative;
+    }
+
+    .block_bottom {
+        width: 236px;
+    }
+
+    .card_price {
+        margin-left: 186px;
+    }
+}
+
+

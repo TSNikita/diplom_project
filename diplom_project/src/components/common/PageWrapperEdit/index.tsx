@@ -3,23 +3,25 @@ import { Outlet } from 'react-router-dom';
 import GetUserName from '../../../store/Registration/selectors';
 import GetSurName from '../../../store/Registration/selectorsSurname';
 import style from './PageWrapperEdit.module.scss';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearUserAction } from '../../../store/Registration/actions';
 
 const PageWrapperEdit = () => {
   const name = useSelector(GetUserName);
   const surname = useSelector(GetSurName);
+  const dispatch = useDispatch();
 
   const getInitialState = (str: string, strS: string) => {
     const updateName = str.split(' ');
     const updateSurName = strS.split(' ');
-    const initial = `${updateName}. ${updateSurName[0][0]}`;
+    const initial = `${updateName} ${updateSurName[0][0]}`;
     return initial;
   };
   return (
     <div className={style.declare_wrapper}>
       <div className={style.block}>
         <div className={style.block_name}>
-          <div className={style.block_avatar} />
+          <div className={style.block_avatar}>{getInitialState(name[0], surname[0])}</div>
           <div>
             <h3>{getInitialState(name, surname)}</h3>
             <span>Админ-меню</span>
@@ -51,7 +53,10 @@ const PageWrapperEdit = () => {
 
           <span>Обьявления</span>
         </div>
-        <button type="button" className={style.block_exit}>
+        <button
+          type="button"
+          className={style.block_exit}
+          onClick={() => dispatch(clearUserAction())}>
           <svg
             width="20"
             height="20"

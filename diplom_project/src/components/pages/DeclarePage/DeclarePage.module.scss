@@ -255,8 +255,12 @@ h4 {
     
 }
 
-.filter_svg {
+.sort_svg {
+    border: none;
+    background-color: transparent;
     height: 24px;
+    width: 24px;
+    cursor: pointer;
 }
 
 .filter_button {

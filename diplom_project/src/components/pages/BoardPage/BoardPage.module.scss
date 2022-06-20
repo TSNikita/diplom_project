@@ -118,3 +118,41 @@ position: relative;
 .button_board svg {
     margin-right: 12px;
 }
+
+@media screen and (max-width: 900px) {
+    // .container_menu {
+    //     width: 831px;
+    //     display: flex;
+    //     margin: auto;
+    // }
+
+    .menu_h1 {
+        font-size: 18px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        margin-left: 20px;
+    }
+
+    .wrapper_menu {
+        max-width: 700px;
+    }
+
+    .items_card {
+        max-width: 768px;
+    }
+}
+
+
+@media screen and(max-width: 450px) {
+    .items_card {
+        max-width: 450px;
+    }
+
+    .container_menu {
+        display: none;
+    }
+    .wrapper_menu {
+        max-width: 450px;
+    }
+}
+

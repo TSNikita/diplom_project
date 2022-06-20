@@ -5,6 +5,7 @@ import PageWrapper from './components/common/MenuMain/PageWrapper';
 import PageWrapperEdit from './components/common/PageWrapperEdit';
 import AuthHOC from './components/HOC/AuthHoc';
 import BoardPage from './components/pages/BoardPage';
+import AdminProductsContainer from './containers/AdminProductsContainer';
 import AuthContainer from './containers/AuthContainer';
 import CardProductContainer from './containers/CardProductContainer';
 import DeclarePageContainer from './containers/DeclarePageContainer';
@@ -23,6 +24,7 @@ const App = () => (
 
       <Route path=":id" element={<CardProductContainer />} />
       <Route path="*" element={<ErrorContainer />} />
+      <Route path="/declare/:id" element={<AdminProductsContainer />} />
       <Route
         path="/"
         element={
@@ -31,7 +33,7 @@ const App = () => (
           </AuthHOC>
         }>
         <Route
-          path="/declare"
+          path="declare"
           element={
             <AuthHOC>
               <DeclarePageContainer />

@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-plusplus */
+import React, { useEffect, useState } from 'react';
 import style from './BoardPage.module.scss';
 import MenuMain from './../../common/MenuMain/index';
 import Card from '../../common/card';
@@ -16,12 +17,27 @@ const BoardPage = () => {
     { value: 'Товары для дома', href: '/Productshome' },
   ];
 
+  const pageNum = 1;
+  const [index, setIndex] = useState(0);
+  const [visibleData, setVisibleData] = useState([{}]);
+
   // const checkActive = (match: any, location: any) => {
   //   if (!location) return false;
   //   const { href } = location;
   //   const { url } = match;
   //   return href === url;
   // };
+
+  useEffect(() => {
+    const numberItems = pageNum * (index + 1);
+    const newArray = [];
+    for (let i = 0; i < data.length; i++) {
+      if (i < numberItems) {
+        newArray.push(data[i]);
+      }
+      setVisibleData(newArray);
+    }
+  }, [index]);
 
   return (
     <div>
@@ -33,9 +49,11 @@ const BoardPage = () => {
           <h1 className={style.menu_h1}>Вся лента</h1>
         </div>
         <div className={style.items_card}>
-          <Card card={data} />
+          {visibleData.map(() => (
+            <Card card={data} />
+          ))}
         </div>
-        <button type="submit" className={style.button_board}>
+        <button type="submit" className={style.button_board} onClick={() => setIndex(index + 1)}>
           <svg
             width="16"
             height="16"

@@ -5,24 +5,27 @@ import style from './CardProductPage.module.scss';
 import maps from '../../../images/image 2 (1).png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { useSelector } from 'react-redux';
+import GetLook from './../../../store/Registration/selectorLook';
 
 type CardProductPagePropsType = {
   product: {
     name: string;
     text: string;
     id: string;
-    data: string;
+    Date: string;
     price: string;
-    image: any;
+    image?: any;
   };
 };
 
 const CardProductPage = ({ product }: CardProductPagePropsType) => {
   const [visible, setVisible] = useState(false);
+  const look = useSelector(GetLook);
 
   return (
     <div className={style.cardProduct_wrapper}>
-      <div className={style.block_left}>
+      <div className={style.block_left} key={product?.id}>
         <div className={style.prev_style}>
           <NavLink to="/">
             <svg
@@ -39,7 +42,7 @@ const CardProductPage = ({ product }: CardProductPagePropsType) => {
           </NavLink>
         </div>
         <div className={style.data_cardProduct}>
-          <span className={style.data_span}>{product?.data}</span>
+          <span className={style.data_span}>{product?.Date}</span>
         </div>
         <h1 className={style.name_h1}>{product?.name}</h1>
         <span className={style.card_articl}>WS-25645-253-55</span>
@@ -67,7 +70,7 @@ const CardProductPage = ({ product }: CardProductPagePropsType) => {
               />
             </g>
           </svg>
-          356
+          <span>{look}</span>
         </div>
         <div className="image_container">
           <div className={style.imgContainer} />

@@ -4,7 +4,7 @@ import UserReducer from './Registration/reducer';
 
 
 const rootReducer = combineReducers({
-    reg: UserReducer
+    reg: UserReducer,
 })
 
 export default rootReducer;

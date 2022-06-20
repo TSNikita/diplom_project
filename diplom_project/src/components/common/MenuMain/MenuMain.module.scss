@@ -47,3 +47,10 @@
     color: rgba(42, 47, 55, 1);
     border: none;
 }
+
+
+@media screen and (max-width: 900px) {
+    .link_style {
+        width: 71px;
+    }
+}

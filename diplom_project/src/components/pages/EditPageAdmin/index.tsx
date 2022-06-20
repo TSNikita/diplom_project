@@ -9,8 +9,6 @@ import 'antd/dist/antd.css';
 
 import maps from '../../../images/image 2.png';
 import { useSelector, useDispatch } from 'react-redux';
-import GetUserName from '../../../store/Registration/selectors';
-import { setUserNameAction } from '../../../store/Registration/actions';
 
 const { TextArea } = Input;
 

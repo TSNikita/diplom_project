@@ -4,7 +4,8 @@ import { UserAction } from './actions';
 const initialState: UserReducerType = {
     name: '',
     surname: '',
-    email: ''
+    email: '',
+    look: 0
 };
 
 const UserReducer = (state = initialState, action: ActionType) => {
@@ -28,6 +29,12 @@ const UserReducer = (state = initialState, action: ActionType) => {
             return {
                 ...initialState,
             };
+            case UserAction.setLook:
+                return {
+                    ...state,
+                    look: state.look + 1
+                }
+
         default: 
         return state;
     }

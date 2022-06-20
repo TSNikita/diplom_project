@@ -4,7 +4,8 @@ export const UserAction: UserActionType = {
     setUserName: 'SET_NAME',
     setSurName: 'SET_SURNAME',
     setEmail: 'SET_EMAIL',
-    clearUser: 'CLEAR_USER'
+    clearUser: 'CLEAR_USER',
+    setLook: 'SET_LOOK'
 }
 
 export const setUserNameAction = (name: string) => ({
@@ -27,3 +28,8 @@ export const clearUserAction = () => ({
     type: UserAction.clearUser,
 })
 
+
+export const setLookAction = (look: number) => ({
+    type: UserAction.setLook,
+    payload: look
+})

@@ -7,16 +7,27 @@ import 'antd/dist/antd.css';
 
 import type { RadioChangeEvent } from 'antd';
 import maps from '../../../images/image 2.png';
-import { useSelector, useDispatch } from 'react-redux';
-
-import { setUserNameAction } from '../../../store/Registration/actions';
-import GetUserName from '../../../store/Registration/selectors';
+import { useDispatch } from 'react-redux';
 
 const { TextArea } = Input;
-
 const { Option } = Select;
 
-const EditPageUser = () => {
+type EditPageUserPropsType = {
+  propsEdit: {
+    name: string;
+    text?: string;
+    value?: string;
+    id?: string;
+    Date?: string;
+    price?: string;
+    image?: any;
+    publ?: string;
+    look?: string;
+    next?: string;
+  }[];
+};
+
+const EditPageUser = ({ propsEdit }: EditPageUserPropsType) => {
   // const name = useSelector(GetUserName);
   const [inputMask, setInputMask] = useState({ value: '', error: false });
   const [has, setHas] = useState(false);
@@ -78,87 +89,89 @@ const EditPageUser = () => {
         </svg>
         <span>Вернуться назад</span>
       </NavLink>
-      <form action="" className={style.formEditUser}>
-        <div className={style.form_button}>
-          <span>Чепчик</span>
-          <button type="submit">Сохранить</button>
-        </div>
-        <div className={style.formEditUser_container}>
-          <div className={style.form_input}>
-            <div className={style.input_name}>
-              <span>Название товара</span>
-              <input type="text" name="name" />
-            </div>
+      {propsEdit.map((prod) => (
+        <form action="" className={style.formEditUser}>
+          <div className={style.form_button} key={prod?.id}>
+            <span>{prod?.name}</span>
+            <button type="submit">Сохранить</button>
+          </div>
+          <div className={style.formEditUser_container}>
+            <div className={style.form_input}>
+              <div className={style.input_name}>
+                <span>Название товара</span>
+                <input type="text" name="name" />
+              </div>
 
-            <div className={style.form_input_ant}>
-              <div className={style.block_l}>
-                <span className={style.span_form}>Категория</span>
-                <Select>
-                  <Option value="1">Автомобили</Option>
-                  <Option value="2">Аксессуары</Option>
-                  <Option value="3">Одежда</Option>
-                  <Option value="4">Мебель</Option>
-                  <Option value="5">Спорт</Option>
-                  <Option value="6">Техника</Option>
-                  <Option value="7">Товары для дома</Option>
-                </Select>
+              <div className={style.form_input_ant}>
+                <div className={style.block_l}>
+                  <span className={style.span_form}>Категория</span>
+                  <Select>
+                    <Option value="1">Автомобили</Option>
+                    <Option value="2">Аксессуары</Option>
+                    <Option value="3">Одежда</Option>
+                    <Option value="4">Мебель</Option>
+                    <Option value="5">Спорт</Option>
+                    <Option value="6">Техника</Option>
+                    <Option value="7">Товары для дома</Option>
+                  </Select>
+                </div>
+                <div className={style.block_r}>
+                  <span className={style.span_form}>Стоимость</span>
+                  <InputNumber />
+                </div>
               </div>
-              <div className={style.block_r}>
-                <span className={style.span_form}>Стоимость</span>
-                <InputNumber />
+              <div className={style.input_mask}>
+                <span className={style.span_form}>Телефон</span>
+                <InputMask
+                  mask="+7\(999) 999-9999"
+                  alwaysShowMask
+                  className={`${inputMask ? style.mask : style.maski}`}
+                  value={inputMask.value}
+                  onChange={phone}
+                  onClick={valMask}
+                />
+                {has && (
+                  <div>
+                    <span>Неверный формат</span>
+                  </div>
+                )}
               </div>
-            </div>
-            <div className={style.input_mask}>
-              <span className={style.span_form}>Телефон</span>
-              <InputMask
-                mask="+7\(999) 999-9999"
-                alwaysShowMask
-                className={`${inputMask ? style.mask : style.maski}`}
-                value={inputMask.value}
-                onChange={phone}
-                onClick={valMask}
+
+              <span className={style.span_form}>Описание</span>
+              <TextArea
+                maxLength={3000}
+                placeholder="Введите текст (до 3000 символов)"
+                className={style.textarea}
               />
-              {has && (
-                <div>
-                  <span>Неверный формат</span>
+              <div className={style.uploadStyle}>
+                <span className={style.span_form}>Фотография</span>
+                <div className={style.file_upload}>
+                  <Upload>
+                    <Button className={style.button_file}>Выбрать файл</Button>
+                  </Upload>
                 </div>
-              )}
-            </div>
-
-            <span className={style.span_form}>Описание</span>
-            <TextArea
-              maxLength={3000}
-              placeholder="Введите текст (до 3000 символов)"
-              className={style.textarea}
-            />
-            <div className={style.uploadStyle}>
-              <span className={style.span_form}>Фотография</span>
-              <div className={style.file_upload}>
-                <Upload>
-                  <Button className={style.button_file}>Выбрать файл</Button>
-                </Upload>
               </div>
-            </div>
-            <div className={style.position}>
-              <span className={style.span_form}>Местоположение</span>
-              <input type="text" placeholder="Введите адрес" className={style.input_position} />
-              <img src={maps} alt="" />
-            </div>
-            <div className={style.block_radio}>
-              <span className={style.span_form}>Публикация</span>
-              <div className={style.block_radio_container}>
-                <div className={style.radio}>
-                  <Radio.Group onChange={onChange} value={value}>
-                    <Radio value={1}>Показать</Radio>
-                    <Radio value={2}>Скрыть</Radio>
-                  </Radio.Group>
+              <div className={style.position}>
+                <span className={style.span_form}>Местоположение</span>
+                <input type="text" placeholder="Введите адрес" className={style.input_position} />
+                <img src={maps} alt="" />
+              </div>
+              <div className={style.block_radio}>
+                <span className={style.span_form}>Публикация</span>
+                <div className={style.block_radio_container}>
+                  <div className={style.radio}>
+                    <Radio.Group onChange={onChange} value={value}>
+                      <Radio value={1}>Показать</Radio>
+                      <Radio value={2}>Скрыть</Radio>
+                    </Radio.Group>
+                  </div>
+                  <span className={style.radio_span}>Сбросить выбор</span>
                 </div>
-                <span className={style.radio_span}>Сбросить выбор</span>
               </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      ))}
     </div>
   );
 };
