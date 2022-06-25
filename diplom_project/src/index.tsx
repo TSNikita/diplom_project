@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import UserReducer from './store/Registration/reducer';
-import rootReducer from './store';
+import rootReducers from './store/index';
 
 const store = configureStore({
   reducer: UserReducer,

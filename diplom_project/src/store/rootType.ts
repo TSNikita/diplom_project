@@ -3,6 +3,6 @@ import { UserReducerType } from './Registration/type';
 
 
 
-export type rootReducerType = {
-    reg: UserReducerType;
+export type rootReducersType = {
+user: UserReducerType;
 }

@@ -303,13 +303,6 @@ h4 {
     stroke: rgba(72, 119, 242, 1);
 }
 
-.cat_check {
-    display: flex;
-    align-items: center;
-    width: 148px;
-    margin-bottom: 16px;
-}
-
 .check_cat {
     margin-left: 24px;
     margin-right: 20px;
@@ -317,13 +310,6 @@ h4 {
 
 .check_cat:last-child {
     margin-right: 0;
-}
-
-.check_span {
-    font-size: 14px;
-    font-weight: 400;
-    color: $title-color;
-    padding-left: 16px;
 }
 
 .check_public_title {
@@ -369,4 +355,3 @@ h4 {
     background-color: rgba(72, 119, 242, 1);
     color: rgba(255, 255, 255, 1);
 }
-

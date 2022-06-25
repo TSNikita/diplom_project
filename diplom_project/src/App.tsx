@@ -25,6 +25,7 @@ const App = () => (
       <Route path=":id" element={<CardProductContainer />} />
       <Route path="*" element={<ErrorContainer />} />
       <Route path="/declare/:id" element={<AdminProductsContainer />} />
+
       <Route
         path="/"
         element={
@@ -41,13 +42,14 @@ const App = () => (
           }
         />
         <Route
-          path="edit"
+          path="/edit/:id"
           element={
             <AuthHOC>
               <EditPageUserContainer />
             </AuthHOC>
           }
         />
+        {/* <Route path=":id" element={<EditPageUserContainer />} /> */}
         <Route
           path="editAdmin"
           element={

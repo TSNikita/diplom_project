@@ -1,10 +1,10 @@
-import { combineReducers } from '@reduxjs/toolkit';
 import UserReducer from './Registration/reducer';
+import { combineReducers } from '@reduxjs/toolkit';
 
 
-
-const rootReducer = combineReducers({
-    reg: UserReducer,
+const rootReducers = combineReducers({
+    user: UserReducer,
 })
 
-export default rootReducer;
+export default rootReducers;
+

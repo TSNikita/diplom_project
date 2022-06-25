@@ -33,7 +33,7 @@ const Header = () => {
         <Button title="Подать обьявление" onClick={console.log} />
         <div className={style.user}>
           <Link to="/reg">
-            {name ? (
+            {email ? (
               <span className={style.span_hover}>
                 <svg
                   className={style.svg_menu}

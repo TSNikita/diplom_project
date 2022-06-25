@@ -4,11 +4,15 @@ import style from './CardDeclare.module.scss';
 
 type CardDeclarePropsType = {
   items: {
+    image?: any;
     name: string;
     value: string;
     Date: string;
     publ: string;
     id: string;
+    // text?: string;
+    // next?: string;
+    // price?: string;
   }[];
 };
 
@@ -72,7 +76,10 @@ const CardDeclare = ({ items }: CardDeclarePropsType) => (
                       </svg>
                       <span>Посмотреть</span>
                     </NavLink>
-                    <NavLink to="/edit" className={style.edit_style}>
+                    <NavLink
+                      to={{ pathname: `/edit/${item.id}` }}
+                      className={style.edit_style}
+                      key={item.id}>
                       <svg
                         width="20"
                         height="20"

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import '../../../assets/style/vars.scss';
+@import '../../../assets/style/main.scss';
+
+
+.cat_check {
+    display: flex;
+    align-items: center;
+    width: 148px;
+    margin-bottom: 16px;
+}
+
+.check_span {
+    font-size: 14px;
+    font-weight: 400;
+    color: $title-color;
+    padding-left: 16px;
+}
+
+
+

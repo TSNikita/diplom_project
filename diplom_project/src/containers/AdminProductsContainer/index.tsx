@@ -12,5 +12,4 @@ const AdminProductsContainer = () => {
     </div>
   );
 };
-
 export default AdminProductsContainer;

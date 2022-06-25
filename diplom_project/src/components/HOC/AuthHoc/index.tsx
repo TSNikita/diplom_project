@@ -15,7 +15,7 @@ type AuthHOCPropsType = {
 };
 
 const AuthHOC = ({ children }: AuthHOCPropsType) => {
-  const isReg = useSelector(GetUserName);
+  const isReg = useSelector(GetEmail);
   const isAuth = useSelector(GetEmail);
   if (isReg || isAuth) {
     return <>{children}</>;

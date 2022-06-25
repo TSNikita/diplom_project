@@ -114,10 +114,11 @@ export const data = [
   },
 ];
 
+export const newArray = [];
 
 export const itemsCard = [
   { name: 'Чепчик', 
-    id: '10', 
+    id: '1', 
     value: 'Одежда', 
     Date: '12 апреля 2022', 
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
@@ -128,7 +129,7 @@ export const itemsCard = [
 },
   {
     name: 'Самовар',
-    id: '11',
+    id: '2',
     value: 'Товары для дома',
     Date: '12 апреля 2022',
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
@@ -139,7 +140,7 @@ export const itemsCard = [
   },
   {
     name: 'Стиральная машина LG',
-    id: '12',
+    id: '3',
     value: 'Техника',
     Date: '11 апреля 2022',
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
@@ -150,7 +151,7 @@ export const itemsCard = [
   },
   {
     name: 'Часы Rolex',
-    id: '13',
+    id: '4',
     value: 'Аксессуары',
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
     Date: '10 апреля 2022',
@@ -161,7 +162,7 @@ export const itemsCard = [
   },
   {
     name: 'Lada Kalina',
-    id: '14',
+    id: '5',
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
     value: 'Автомобили',
     text: 'Качественная красиваядоска с креплениями',
@@ -172,7 +173,7 @@ export const itemsCard = [
   },
   {
     name: 'Спортивный велосипед',
-    id: '15',
+    id: '6',
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
     value: 'Спорт',
     Date: '16 апреля 2022',
@@ -183,7 +184,7 @@ export const itemsCard = [
   },
   {
     name: 'Ботинки поношенные',
-    id: '16',
+    id: '7',
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
     value: 'Одежда',
     Date: '25 апреля 2022',
@@ -194,7 +195,7 @@ export const itemsCard = [
   },
   {
     name: 'Приставка Dendy',
-    id: '17',
+    id: '8',
     value: 'Техника',
     image: require('../helpers/imgCard/unsplash_j5asemKMmQY.png'),
     Date: '18 апреля 2022',
