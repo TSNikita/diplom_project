@@ -8,6 +8,7 @@ import Category from '../../common/category';
 
 const DeclarePage = () => {
   // const [state, setState] = useState({ itemsCard });
+  const [check, setCheck] = useState(false);
   const [filter, setFilter] = useState(itemsCard);
   const [clearButton, setClearButton] = useState(false);
 
@@ -22,9 +23,9 @@ const DeclarePage = () => {
   //   copyData.sort((a, b) => (a.id > b.id ? 1 : -1));
   // };
 
-  useEffect(() => {
-    setFilter(itemsCard);
-  }, [itemsCard]);
+  // useEffect(() => {
+  //   setFilter(itemsCard);
+  // }, [itemsCard]);
 
   const handler = (value: string) => {
     const newTodo = [...itemsCard].filter((el) => el.value === value);
@@ -32,7 +33,7 @@ const DeclarePage = () => {
   };
 
   const clearHandler = () => {
-    setFilter(filter);
+    setFilter(itemsCard);
   };
 
   return (
@@ -134,10 +135,10 @@ const DeclarePage = () => {
                 <h3 className={style.check_cat_title}>Категория</h3>
                 <Category choos={handler} />
                 <div className={style.check_menu_button}>
-                  <button className={style.button_blue} type="button" onClick={clearHandler}>
+                  <button className={style.button_blue} type="button">
                     Применить
                   </button>
-                  <button className={style.button_white} type="button">
+                  <button className={style.button_white} type="button" onClick={clearHandler}>
                     Сбросить
                   </button>
                 </div>

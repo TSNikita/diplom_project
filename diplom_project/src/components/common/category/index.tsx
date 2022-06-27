@@ -6,6 +6,7 @@ import { itemsCard } from '../../../helpers/index';
 
 type CategoryPropsType = {
   choos: any;
+  // onClick: () => void;
 };
 
 const Category = ({ choos }: CategoryPropsType) => {
@@ -32,13 +33,9 @@ const Category = ({ choos }: CategoryPropsType) => {
   return (
     <div>
       {state.category.map((el) => (
-        <div
-          key={el.key}
-          className={style.cat_check}
-          onClick={() => choos(el.name)}
-          role="button"
-          tabIndex={0}>
-          <Checkbox onChange={onChange} />
+        <div key={el.key} className={style.cat_check} role="button" tabIndex={0}>
+          <Checkbox onChange={onChange} onClick={() => choos(el.name)} />
+
           <span className={style.check_span}>{el.name}</span>
         </div>
       ))}

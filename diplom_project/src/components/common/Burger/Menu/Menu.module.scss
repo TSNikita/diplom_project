@@ -4,6 +4,7 @@
     position: fixed;
     z-index: 1;
     left: 0;
+    bottom: 0;
     transform: translateX(-100%);
     transition: all 0.2s;
 }
@@ -71,7 +72,7 @@ ul .menu_li:first-child {
 
 @media screen and(max-width: 450px) {
     .menu__content {
-        margin-top: 33px;
+        margin-top: 42px;
         padding-left: 19px;
         position: absolute;
         top: 30px;
