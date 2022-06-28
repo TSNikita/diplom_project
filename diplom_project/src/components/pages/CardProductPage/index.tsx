@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import style from './CardProductPage.module.scss';
 import maps from '../../../images/image 2 (1).png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
@@ -22,12 +22,17 @@ type CardProductPagePropsType = {
 const CardProductPage = ({ product }: CardProductPagePropsType) => {
   const [visible, setVisible] = useState(false);
   const look = useSelector(GetLook);
+  const navigate = useNavigate();
+
+  const handlerNavigate = () => {
+    navigate(-1);
+  };
 
   return (
     <div className={style.cardProduct_wrapper}>
       <div className={style.block_left} key={product?.id}>
         <div className={style.prev_style}>
-          <NavLink to="/">
+          <button type="button" onClick={handlerNavigate} className={style.button_navigate}>
             <svg
               width="24"
               height="24"
@@ -39,7 +44,7 @@ const CardProductPage = ({ product }: CardProductPagePropsType) => {
                 fill="#2C2D2E"
               />
             </svg>
-          </NavLink>
+          </button>
         </div>
         <div className={style.data_cardProduct}>
           <span className={style.data_span}>{product?.Date}</span>

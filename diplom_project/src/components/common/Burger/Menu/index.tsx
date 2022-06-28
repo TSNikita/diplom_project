@@ -1,6 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { NavLink } from 'react-router-dom';
-import Button from '../../Button';
 import style from './Menu.module.scss';
 
 type MenuPropsType = {

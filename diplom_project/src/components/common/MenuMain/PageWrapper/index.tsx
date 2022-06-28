@@ -10,7 +10,7 @@ const PageWrapper = () => {
   const [menuActive, setMenuActive] = useState(false);
   // const [open, setOpen] = useState(true);
   const items = [
-    { value: 'Вся лента', href: '/home' },
+    { value: 'Вся лента', href: '/board' },
     { value: 'Автомобили', href: '/avto' },
     { value: 'Аксессуары', href: '/accessory' },
     { value: 'Мебель', href: '/furniture' },

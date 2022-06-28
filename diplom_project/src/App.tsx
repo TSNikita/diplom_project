@@ -18,7 +18,7 @@ import RegistrationContainer from './containers/RegistrationContainer';
 const App = () => (
   <Routes>
     <Route path="/" element={<PageWrapper />}>
-      <Route path="/" element={<MainPageContainer />}>
+      <Route path="/board" element={<MainPageContainer />}>
         <Route path="/board" element={<BoardPage />} />
       </Route>
 

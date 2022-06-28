@@ -4,6 +4,7 @@ import style from './BoardPage.module.scss';
 import MenuMain from './../../common/MenuMain/index';
 import Card from '../../common/card';
 import { data } from './../../../helpers/index';
+import { useParams } from 'react-router-dom';
 
 const BoardPage = () => {
   const menuItems = [
@@ -16,6 +17,9 @@ const BoardPage = () => {
     { value: 'Техника', href: '/technic' },
     { value: 'Товары для дома', href: '/Productshome' },
   ];
+
+  // const { href } = useParams();
+  // const menuHref = menuItems.find((el) => el.href === href)!;
 
   const pageNum = 1;
   const [index, setIndex] = useState(0);
