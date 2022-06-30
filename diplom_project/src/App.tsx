@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Card from './components/common/card';
 import PageWrapper from './components/common/MenuMain/PageWrapper';
 import PageWrapperEdit from './components/common/PageWrapperEdit';
 import AuthHOC from './components/HOC/AuthHoc';
@@ -18,7 +17,7 @@ import RegistrationContainer from './containers/RegistrationContainer';
 const App = () => (
   <Routes>
     <Route path="/" element={<PageWrapper />}>
-      <Route path="/board" element={<MainPageContainer />}>
+      <Route path="/" element={<MainPageContainer />}>
         <Route path="/board" element={<BoardPage />} />
       </Route>
 

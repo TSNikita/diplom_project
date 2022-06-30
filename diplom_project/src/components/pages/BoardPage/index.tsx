@@ -4,7 +4,6 @@ import style from './BoardPage.module.scss';
 import MenuMain from './../../common/MenuMain/index';
 import Card from '../../common/card';
 import { data } from './../../../helpers/index';
-import { useParams } from 'react-router-dom';
 
 const BoardPage = () => {
   const menuItems = [
@@ -44,7 +43,7 @@ const BoardPage = () => {
   }, [index]);
 
   return (
-    <div>
+    <div className={style.top_container}>
       <div className={style.container_list}>
         <div className={style.wrapper_menu}>
           <div className={style.container_menu}>

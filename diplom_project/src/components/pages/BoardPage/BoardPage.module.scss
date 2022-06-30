@@ -120,11 +120,7 @@ position: relative;
 }
 
 @media screen and (max-width: 900px) {
-    // .container_menu {
-    //     width: 831px;
-    //     display: flex;
-    //     margin: auto;
-    // }
+    
 
     .menu_h1 {
         font-size: 18px;
@@ -144,8 +140,13 @@ position: relative;
 
 
 @media screen and(max-width: 450px) {
+.container_list {
+    width: 320px;
+}
+
     .items_card {
-        max-width: 450px;
+        width: 320px;
+        margin: 0;
     }
 
     .container_menu {
@@ -153,6 +154,10 @@ position: relative;
     }
     .wrapper_menu {
         max-width: 450px;
+    }
+
+    .button_board {
+        margin-left: 40px;
     }
 }
 

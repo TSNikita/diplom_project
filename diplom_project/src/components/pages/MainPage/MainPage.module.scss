@@ -125,7 +125,7 @@ position: relative;
         width: 671px;
         height: 224px;
         margin-bottom: 40px;
-        margin-left: 25px;
+        
 
     &_title {
         margin-top: 72px;
@@ -159,7 +159,7 @@ display: none;
 @media screen and(max-width: 450px) {
 
     .container {
-        // max-width: 320px;
+        width: 320px;
         margin: auto;
         height: auto;
         flex-direction: column-reverse;
@@ -179,9 +179,7 @@ display: none;
 
 }
 
-.wrapper {
-    width: 450px;
-}
+
 
 .container_image {
     width: 400px;

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import style from './CardProductPage.module.scss';
 import maps from '../../../images/image 2 (1).png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader

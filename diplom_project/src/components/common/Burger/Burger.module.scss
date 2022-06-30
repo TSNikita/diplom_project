@@ -38,18 +38,22 @@
     opacity: 50%;
 }
 
-.burger_btn.active span {
-    transform: scale(0) translate(0px, -50%);
+
+
+.burger_btn::before:nth-child(1) {
+    
+    transform: rotate(-45deg) translate(6px, -2px);
+    transform-origin: left top;
 }
 
-.burger_btn.active::before {
-    top: 50%;
-    transform: rotate(-45deg) translate(0px, -50%);
+.burger_btn span:nth-child(2) {
+    transform: scale(0) ;
 }
 
-.burger_btn.active::after {
-    bottom: 50%;
-    transform: rotate(45deg) translate(0px, -50%);
+.burger_btn::after:nth-child(3) {
+    
+    transform: rotate(45deg) translate(-3px, -21px);
+    transform-origin: right bottom;
 }
 
 

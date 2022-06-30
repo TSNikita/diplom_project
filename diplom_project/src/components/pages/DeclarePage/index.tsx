@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import style from './DeclarePage.module.scss';
 import { Pagination, Checkbox } from 'antd';
@@ -8,9 +8,9 @@ import Category from '../../common/category';
 
 const DeclarePage = () => {
   // const [state, setState] = useState({ itemsCard });
-  const [check, setCheck] = useState(false);
+
   const [filter, setFilter] = useState(itemsCard);
-  const [clearButton, setClearButton] = useState(false);
+  // const [clearButton, setClearButton] = useState(false);
 
   const sortData = itemsCard
     .sort((a, b) => new Date(a.Date).getTime() - new Date(b.Date).getTime())

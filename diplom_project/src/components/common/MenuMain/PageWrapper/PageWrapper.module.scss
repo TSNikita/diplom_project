@@ -17,6 +17,12 @@
     // justify-content: center;
 }
 
+@media screen and(max-width: 450px) {
+    .content_wrapper {
+        width: 320px;
+    }
+}
+
 // .content {
 //     margin: auto;   
 // }

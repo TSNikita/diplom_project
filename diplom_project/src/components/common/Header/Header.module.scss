@@ -191,9 +191,6 @@ span:hover .svg_menu path {
 
 // 768
 @media screen and (max-width: 900px) {
-    .header {
-        max-width: 900px;
-    }
     .logo_style {
         margin-right: 41px;
         margin-left: 0;
@@ -250,12 +247,12 @@ span:hover .svg_menu path {
 // 320
 @media screen and(max-width: 450px) {
     .header {
-        max-width: 450px;
         height: 56px;
     }
 
     .logo_style {
         margin-right: 0;
+        margin-left: 50px;
     }
 
     .avatar {
@@ -264,7 +261,6 @@ span:hover .svg_menu path {
     }
 
     .user {
-        margin-right: 16px;
         margin-left: 18px;
     }
 

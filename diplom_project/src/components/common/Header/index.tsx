@@ -28,7 +28,10 @@ const Header = () => {
   return (
     <div className={style.block_header}>
       <header style={{ fontFamily: 'Jost' }} className={style.header}>
-        <img src={Logo} alt="logo" className={style.logo_style} />
+        <NavLink to="/board">
+          <img src={Logo} alt="logo" className={style.logo_style} />
+        </NavLink>
+
         <SearchInput />
         <Button title="Подать обьявление" onClick={console.log} />
         <div className={style.user}>
