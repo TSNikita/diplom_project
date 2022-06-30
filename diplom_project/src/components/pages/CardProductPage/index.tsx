@@ -7,6 +7,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { useSelector } from 'react-redux';
 import GetLook from './../../../store/Registration/selectorLook';
+import { Map, Placemark, YMaps } from 'react-yandex-maps';
 
 type CardProductPagePropsType = {
   product: {
@@ -18,6 +19,16 @@ type CardProductPagePropsType = {
     image?: any;
   };
 };
+
+const mapData = {
+  center: [55.74821774459076, 37.622584156036375],
+  zoom: 15,
+};
+
+const coordinates = [
+  [55.74821774459076, 37.622584156036375],
+  [55.74821774459076, 37.622584156036375],
+];
 
 const CardProductPage = ({ product }: CardProductPagePropsType) => {
   const [visible, setVisible] = useState(false);
@@ -98,11 +109,17 @@ const CardProductPage = ({ product }: CardProductPagePropsType) => {
           <h2 className={style.cardProduct_h2}>Описание: </h2>
           <span className={style.cardProduct_span}>{product?.text}</span>
         </div>
-        <div>
+        <div className={style.maps_style}>
           <h2 className={style.cardProduct_h2_g}>
             Местоположение: <span className={style.cardProduct_h2_span}>г. Кстово</span>{' '}
           </h2>
-          <img src={maps} alt="maps" className={style.card_Product_maps} />
+          <YMaps>
+            <Map defaultState={mapData} width="768px" height="325px">
+              {coordinates.map((coordinate) => (
+                <Placemark geometry={coordinate} />
+              ))}
+            </Map>
+          </YMaps>
         </div>
       </div>
       <div className={style.block_right_wrapper}>

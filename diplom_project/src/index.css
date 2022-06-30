@@ -163,3 +163,11 @@ code {
   justify-content: space-between !important;
   width: 768px !important;
 }
+
+.ymaps-2-1-79-map {
+  width: 768px !important;
+}
+
+.style {
+  width: 768vw !important;
+}
